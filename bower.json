@@ -1,0 +1,25 @@
+{
+  "name": "finly.co-template",
+  "description": "HTML Template",
+  "main": "index.html",
+  "authors": [
+    "diangr"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JS"
+  ],
+  "homepage": "https://github.com/diangr/finly.co-template",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "4.0.0-beta"
+  }
+}
