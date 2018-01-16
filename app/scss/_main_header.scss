@@ -1,0 +1,69 @@
+#main_header {
+    background-image: url('../images/bg-header.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+
+    height: 100vh;
+
+    #main-header::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba( 0, 0, 0, 0.5);
+        z-index: -1!important;
+    }
+}
+
+.navbar {
+    padding: 50px 0 0;
+
+    .navbar-brand {
+        color: $w;
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    .navbar-nav {
+
+        li {
+            display: inline-block;
+
+            a {
+                display: block;
+                color: $w;
+                font-size: 16px;
+                font-weight: 500;
+                padding: 10px 25px!important;
+            }
+
+            .btn {
+                font-size: 15px;
+                text-transform: uppercase;
+                letter-spacing: 0.8px;
+                background: $primary;
+                margin-left: 15px;
+            }
+        }
+    }
+
+    .hero-content {
+        min-width: 650px;
+        p {
+            
+        }
+
+        h1 {
+            color: $w;
+            font-size: 58px;
+            font-weight: 700;
+        }
+
+        .btn {
+
+        }
+    }
+}
