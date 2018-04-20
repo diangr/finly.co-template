@@ -1,69 +1,163 @@
 #main_header {
+    position: relative;
+    z-index: 0;
     background-image: url('../images/bg-header.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50%;
-
+    
     height: 100vh;
+    min-height: 800px;
 
-    #main-header::after {
+    @media screen and (max-width: 992px) {
+        min-width: 768px;
+    }
+    
+    @media screen and (max-width: 667px) {
+        min-width: 450px;
+    }
+
+    @media screen and (max-width: 375px) {
+        min-width: 400px;
+        height: 80vh;
+    }
+
+    @media screen and (max-width: 320px) {
+        min-width: 480px;
+        height: 100vh;
+    }
+
+    &::after {
         content: '';
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba( 0, 0, 0, 0.5);
-        z-index: -1!important;
-    }
-}
-
-.navbar {
-    padding: 50px 0 0;
-
-    .navbar-brand {
-        color: $w;
-        font-size: 24px;
-        font-weight: 500;
+        background-color: rgba(0, 0, 0, 0.65);
+        z-index: -1;
     }
 
-    .navbar-nav {
+    .navbar {
+        padding: 50px 0 0;
 
-        li {
-            display: inline-block;
-
-            a {
-                display: block;
-                color: $w;
-                font-size: 16px;
-                font-weight: 500;
-                padding: 10px 25px!important;
-            }
-
-            .btn {
-                font-size: 15px;
-                text-transform: uppercase;
-                letter-spacing: 0.8px;
-                background: $primary;
-                margin-left: 15px;
-            }
+        &-brand {
+            color: $w;
+            font-size: 24px;
+            font-weight: 500;
         }
-    }
 
-    .hero-content {
-        min-width: 650px;
-        p {
+        &-toggler {
+            border-color: $w;
+        
+            .fa {
+                color: $w;
+            }
             
         }
 
+        &-nav {
+            li {
+                display: inline-block;
+
+                a {
+                    color: $w;
+                    font-size: 18px;
+                    font-weight: 500;
+                    padding: 10px 25px;
+                }
+
+                .btn {
+                    background-color: $primary;
+                    font-size: 15px;
+                    letter-spacing: 0.8px;
+                    text-transform: uppercase;
+                    margin-left: 15px;
+                }
+            }
+        }
+
+        @media screen and ( max-width: 992px ) {
+            padding-top: 30px;
+            
+            .collapse.show, .collapsing {
+                position: absolute;
+                top: 95px;
+                left: 0;
+                background-color: $c_b;
+                width: 100%;
+                text-align: center;
+                padding: 30px 0;
+
+                li {
+                    a {
+                        padding-top: 15px;
+                        padding-bottom: 15px;
+                    }
+                }
+    
+                .btn {
+                    display: inline-block;
+                    margin: 10px;
+                }
+            }
+        }
+        // Media Query
+
+    } // Navbar
+
+    .hero_content {
+        padding-top: 220px;
+        max-width: 650px;
+
+        p {
+            font-size: 20px;
+        }
+        
         h1 {
             color: $w;
             font-size: 58px;
-            font-weight: 700;
-        }
+            font-weight: 700;    
+            margin-bottom: 30px;
 
+        }
+        
         .btn {
-
+            display: inline-block;
+            padding: 10px 30px;
+            color: $w;
+            border: 1px solid $w;
+            
+            &:hover, &:active, &:focus {
+                background-color: $w;
+                color: $c_b;
+            }
         }
+        
+        @media screen and ( max-width: 667px ) {
+            padding-top: 100px;
+            
+            p {
+                font-size: 16px;
+            }
+            
+            h1 {
+                font-size: 38px;
+                margin-bottom: 30px;
+            }
+        }
+        
+        @media screen and ( max-width: 320px ) {
+            
+            h1 {
+                font-size: 28px;
+                line-height: 1.3;
+            }
+            
+            .btn {
+                font-size: 14px;    
+            }
+        }
+
     }
 }
