@@ -63,6 +63,8 @@
         &:hover, &:active, &:focus {
             background-color: $primary;
             color: $w;
+            
+            transition: all 0.1s ease-in-out;
         }
     }
 
