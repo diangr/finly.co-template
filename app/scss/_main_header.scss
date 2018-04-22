@@ -73,6 +73,12 @@
                     letter-spacing: 0.8px;
                     text-transform: uppercase;
                     margin-left: 15px;
+
+                    &:hover, &:active, &:focus {
+                        background: rgba(22, 198, 98, 0.34);
+                        border: 1px solid $primary ;
+                        color: $primary;
+                    }
                 }
             }
         }
