@@ -1,9 +1,18 @@
 #services {
     padding: 180px 0;
     text-align: center;
+    
+    @media screen and ( max-width: 575px ) {
+        padding: 80px 0;
+    }
 
     .list_services {
         margin-top: 80px;
+
+        @media screen and ( max-width: 575px ) {
+            margin-top: 50px;
+            padding: 0 30px;
+        }
 
         .content {
             border: 1px solid $c_ef;
@@ -12,12 +21,13 @@
 
             transition: all 0.35s ease-in-out;
 
+            
             .icon {
                 color: $primary;
                 padding: 60px 0;
                 font-size: 56px;
             }
-
+            
             h4 {
                 color: $c_b;
                 font-size: 20px;
@@ -35,20 +45,67 @@
                 margin-bottom: 60px;
                 opacity: 0.35;
             }
-
+            
             &:hover, &:active, &:focus {
                 margin-top: -10px;
                 border-color: rgba(0, 0, 0, 0.02);
                 box-shadow: 0 5px 28px rgba(0, 0, 0, 0.08);
-               
+                
                 .fa-arrow-circle-right {
                     color: $primary;
                     opacity: 1;
                 }
+                
+            }
+            
+            @media screen and ( max-width: 991px ) {
+                margin: 0 5px;
+                
+                .icon {
+                    font-size: 48px;
+                }
 
+                p {
+                    font-size: 14px;
+                    padding: 0 5px;
+                }
+
+                .fa-arrow-circle-right  {
+                    margin-bottom: 25px;
+                }
             }
 
-        }
+            @media screen and ( max-width: 767px ) {
+                margin: 0 0 20px;
+                
+                .icon {
+                    font-size: 48px;
+                }
+
+                p {
+                    padding: 0 30px;
+                }
+            }
+
+            @media screen and ( max-width: 575px ) {
+                margin: 0 0 30px;
+                
+                .icon {
+                    padding: 40px 0;
+                }
+
+                h4 {
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    padding: 0 30px;
+                    padding: 0 5px;
+                    margin-bottom: 40px;
+                }
+            }
+        
+        } // Content
     } // List Services
 
     .btn_see_all {
@@ -65,6 +122,11 @@
             color: $w;
             
             transition: all 0.1s ease-in-out;
+        }
+
+        @media screen and ( max-width: 575px ) {
+            margin-top: 50px;
+            font-size: 13px;
         }
     }
 
