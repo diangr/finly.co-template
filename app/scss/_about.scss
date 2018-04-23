@@ -36,8 +36,8 @@
 
             img {
                 float: left;
-                width: 60px;
-                height: 60px;
+                width: 58px;
+                height: 58px;
                 border-radius: 100%;
                 margin-right: 15px;
             }
@@ -46,6 +46,7 @@
                 display: block;
                 color: $c_b;
                 font-weight: 600;
+                padding-top: 8px;
 
                 span {
                     display: block;
